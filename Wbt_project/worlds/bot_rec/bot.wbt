@@ -1,0 +1,163 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.27911624471202245 -0.0890491725351183 0.9561194312473045 3.709104603946051
+  position 1.0965083778962477 0.6565906978246243 0.5221214929563123
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0 0 -0.12
+  rotation 0 1 0 0
+  floorSize 5 5
+}
+Robot {
+  translation -5.49914e-18 4.73914e-18 -0.050045
+  rotation -2.698443119727994e-07 -1.1110100315257515e-07 0.9999999999999574 2.9489041081851354e-10
+  children [
+    DEF left_1_leg Solid {
+      translation 0.02 0.04 0
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        DEF left_1_leg_Joint Solid {
+          rotation 0 1 0 5.307156870259904e-06
+          children [
+            DEF left_1_Joint Shape {
+              appearance PBRAppearance {
+                baseColor 1 0 0
+              }
+              geometry Cylinder {
+                height 0.01
+                radius 0.01
+              }
+            }
+          ]
+          name "left_1_leg_Joint Solid"
+          boundingObject USE left_1_Joint
+          physics Physics {
+          }
+        }
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            position 0.3321633507071567
+            axis 0 0 1
+          }
+          device [
+            RotationalMotor {
+              name "left_1 motor"
+            }
+          ]
+          endPoint Solid {
+            translation -0.02 8.673617379884035e-19 0
+            children [
+              DEF left_1_feet_Joint Solid {
+                translation -0.02 0 6.74634e-14
+                rotation 1 0 0 1.5708
+                children [
+                  HingeJoint {
+                    jointParameters HingeJointParameters {
+                      position 0.9692799999999999
+                      axis 0 0 1
+                    }
+                    device [
+                      RotationalMotor {
+                      }
+                    ]
+                    endPoint DEF left_1_feet Solid {
+                      translation 0.016489581217938833 -0.01131784923284519 0
+                      rotation 0 0 1 0.9692799999999999
+                      children [
+                        Solid {
+                          translation -2.65359e-08 -0.01 0
+                          rotation 0.9999999999943767 -8.588329999951705e-07 3.2417399999817706e-06 -1.5707953071795862
+                          children [
+                            DEF left_1_feet Shape {
+                              appearance PBRAppearance {
+                                baseColor 0 0 1
+                              }
+                              geometry Sphere {
+                                radius 0.005
+                              }
+                            }
+                          ]
+                          name "left_1_feet"
+                          boundingObject USE left_1_feet
+                          physics Physics {
+                          }
+                        }
+                        DEF left_1_feet Shape {
+                          appearance PBRAppearance {
+                            baseColor 0 0 1
+                          }
+                          geometry Box {
+                            size 0.005 0.02 0.005
+                          }
+                        }
+                      ]
+                      name "left_1_feet"
+                      boundingObject USE left_1_feet
+                      physics Physics {
+                      }
+                    }
+                  }
+                  DEF left_1_feet_Joint Solid {
+                    children [
+                      DEF left_1_feet_Joint Shape {
+                        appearance PBRAppearance {
+                          baseColor 1 0 0
+                        }
+                        geometry Cylinder {
+                          height 0.01
+                          radius 0.01
+                        }
+                      }
+                    ]
+                    name "left_1_feet_Joint Solid"
+                    boundingObject USE left_1_feet_Joint
+                  }
+                ]
+                boundingObject USE left_1_feet_Joint
+                physics Physics {
+                }
+              }
+              DEF left_1_leg Shape {
+                appearance PBRAppearance {
+                  baseColor 0 0 1
+                }
+                geometry Box {
+                  size 0.04 0.005 0.005
+                }
+              }
+            ]
+            name "left_1_leg"
+            boundingObject USE left_1_leg
+            physics Physics {
+            }
+          }
+        }
+      ]
+      name "left_1_leg Solid"
+      boundingObject USE left_1_leg
+      physics Physics {
+      }
+    }
+    DEF BODY Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 1 0
+        }
+        name "body"
+      }
+      geometry Box {
+        size 0.09 0.07 0.02
+      }
+    }
+  ]
+  boundingObject USE BODY
+  physics Physics {
+  }
+  controller "my_controller"
+}
