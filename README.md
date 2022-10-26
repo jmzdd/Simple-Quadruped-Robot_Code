@@ -1,4 +1,4 @@
-# Simple-Quadruped-Robot-Code-HaaS-
+# Simple-Quadruped-Robot-Code-HaaS
 基于NodeMCU-32S + HaaS四足爬行机器人的简单实现
 
 ## 当前仓库
