@@ -10,3 +10,6 @@
 
 ## 参考资料
 [How to Program a Quadruped Robot with Arduino - Make: (makezine.com)](https://makezine.com/article/technology/robotics/robot-quadruped-arduino-program/)
+
+## 感谢
+[yanhy2000](https://github.com/yanhy2000)对代码中多任务处理部分提供的帮助(release_code.zip/release/src/lib_thread.py)
