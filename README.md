@@ -125,7 +125,7 @@
 <div align=center> <img src="./readme/使用Webots模拟.png" width = 50%/></div>
 <p align="center">使用Webots模拟</p>
 
-<div align=center> <img src="./readme/Bot_Work.gif" width = 50%/></div>
+<div align=center> <img src="./readme/Bot_Work.gif" width = 40%/></div>
 <p align="center">实时模拟画面</p>
 
 ### 5.2 步态分析
